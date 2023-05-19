@@ -11,8 +11,7 @@ class Plugin implements PluginInterface
 {
     public function activate(Composer $composer, IOInterface $io)
     {
-        var_dump('install');
-        new Installer();
+        Installer::install();
     }
 
     public function deactivate(Composer $composer, IOInterface $io)

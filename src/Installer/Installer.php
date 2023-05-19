@@ -13,6 +13,11 @@ class Installer
 {
     public function __construct()
     {
-        var_dump('Yeah lets go!');
+
+    }
+
+    public static function install()
+    {
+        var_dump('start the install');
     }
 }
