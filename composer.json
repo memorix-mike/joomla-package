@@ -18,7 +18,7 @@
     "composer/composer": "^2.0"
   },
   "extra": {
-    "class": "PicturaeJoomla\\Installer\\Installer"
+    "class": "PicturaeJoomla\\Installer\\Plugin"
   },
   "autoload": {
     "psr-4": {
