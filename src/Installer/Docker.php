@@ -6,7 +6,7 @@ class Docker
 {
     public static function setup()
     {
-        $file = __DIR__ . '/files/ddocker/ocker-compose.yml';
+        $file = __DIR__ . '/files/docker/docker-compose.yml';
 
         if(file_exists($file)) {
             copy($file, getcwd() . '/docker-compose.yml');
