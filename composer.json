@@ -1,0 +1,21 @@
+{
+  "name": "picturae/joomla",
+  "description": "Picturae Joomla installer",
+  "type": "library",
+  "license": "propierary",
+  "authors": [
+    {
+      "name": "Picturae",
+      "email": "info@picturae.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "7.4|8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Picturae\\": "src/"
+    }
+  }
+}
