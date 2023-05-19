@@ -33,6 +33,10 @@ class Installer implements InstallerInterface
 
     public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
+
+        $file = fopen('testbestand.txt', 'w');
+        fwrite($file, "dit is een test");
+
         var_dump('install');
         return Command::SUCCESS;
     }
