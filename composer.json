@@ -2,7 +2,7 @@
   "name": "picturae-mike/joomla",
   "description": "Picturae Joomla installer",
   "version": "0.0.4",
-  "type": "library",
+  "type": "framework",
   "license": "MIT",
   "authors": [
     {
@@ -19,6 +19,9 @@
     }
   },
   "scripts": {
+    "post-create-project-cmd": [
+      "PicturaeJoomla\\Installer\\Installer::postPackageInstall"
+    ],
     "post-package-install": [
       "PicturaeJoomla\\Installer\\Installer::postPackageInstall"
     ]
