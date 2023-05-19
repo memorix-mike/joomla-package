@@ -20,7 +20,7 @@
   "extra": {
     "class": [
       "PicturaeJoomla\\Installer\\Plugin"
-    ],
+    ]
   },
   "autoload": {
     "psr-4": {
