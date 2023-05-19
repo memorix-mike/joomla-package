@@ -17,5 +17,10 @@
     "psr-4": {
       "PicturaeJoomla\\": "src/"
     }
+  },
+  "scripts": {
+    "post-package-install": [
+      "PicturaeJoomla\\Installer\\Installer::postPackageInstall"
+    ]
   }
 }
