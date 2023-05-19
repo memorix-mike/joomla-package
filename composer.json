@@ -1,6 +1,7 @@
 {
   "name": "picturae-mike/joomla",
   "description": "Picturae Joomla installer",
+  "version": "0.0.3",
   "type": "library",
   "authors": [
     {
