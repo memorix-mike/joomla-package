@@ -1,29 +1,15 @@
 <?php
 namespace PicturaeJoomla\Installer;
 
-//use Composer\Script\Event;
-//use Composer\Installer\PackageEvent;
+use Composer\Composer;
+use Composer\IO\IOInterface;
+use Composer\Plugin\PluginInterface;
 
-class Installer
+class Installer implements PluginInterface
 {
-    public function __construct()
+    public function activate(Composer $composer, IOInterface $io)
     {
-        dd('loaded!');
-    }
-
-    public static function postUpdate()
-    {
-        // here be dragons
-        $file = fopen("testfile.txt", "w");
-        fwrite($file, "testbestand");
-        fwrite(STDOUT, "Task completed successfully!");
-
-        symlink('Joomla/test.php', 'test');
-    }
-
-    public function postPackageInstall()
-    {
-        $file = fopen("testfile.txt", "w");
-        fwrite($file, "testbestand");
+        $installer = new TemplateInstaller($io, $composer);
+        $composer->getInstallationManager()->addInstaller($installer);
     }
 }

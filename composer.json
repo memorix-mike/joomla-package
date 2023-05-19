@@ -2,7 +2,7 @@
   "name": "picturae-mike/joomla",
   "description": "Picturae Joomla installer",
   "version": "0.0.4",
-  "type": "framework",
+  "type": "composer-plugin",
   "license": "MIT",
   "authors": [
     {
@@ -11,7 +11,14 @@
     }
   ],
   "require": {
-    "php": "^7.4 || ^8.1"
+    "php": "^7.4 || ^8.1",
+    "composer-plugin-api": "^2.3"
+  },
+  "require-dev": {
+    "composer/composer": "^2.0"
+  },
+  "extra": {
+    "class": "PicturaeJoomla\\Installer\\Installer"
   },
   "autoload": {
     "psr-4": {
@@ -19,6 +26,5 @@
     }
   },
   "scripts": {
-    "post-update-cmd": "PicturaeJoomla\\Installer\\Installer::postUpdate"
   }
 }
