@@ -12,13 +12,7 @@ class Plugin implements PluginInterface
     public function activate(Composer $composer, IOInterface $io)
     {
         var_dump('install');
-
-        $installer = new Installer($io, $composer);
-        var_dump($installer);
-
-        $installManager = $composer->getInstallationManager()
-                 ->addInstaller($installer);
-        var_dump($installManager);
+        new Installer();
     }
 
     public function deactivate(Composer $composer, IOInterface $io)
