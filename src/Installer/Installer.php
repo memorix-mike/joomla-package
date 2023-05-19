@@ -9,6 +9,6 @@ class Installer
 {
     public function __construct(IOInterface $io, Composer $composer)
     {
-        dd('Lets go!');
+        var_dump('Lets go!');
     }
 }
