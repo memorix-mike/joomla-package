@@ -5,7 +5,7 @@ namespace PicturaeJoomla\Installer;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 
-class Installer
+class Installer extends InstallerInterface
 {
     public function __construct(IOInterface $io, Composer $composer)
     {
