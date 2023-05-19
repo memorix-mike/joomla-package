@@ -3,6 +3,7 @@
   "description": "Picturae Joomla installer",
   "version": "0.0.3",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Picturae",
