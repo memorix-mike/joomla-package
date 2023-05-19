@@ -12,7 +12,7 @@ use Symfony\Component\Console\Command\Command;
 class Installer implements InstallerInterface
 {
 
-    public function dump($var) {
+    function dump($var) {
         echo '<pre>';
         var_dump($var);
         echo '</pre>';
