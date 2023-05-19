@@ -5,7 +5,7 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 
-
+use PicturaeJoomla\Installer\Installer;
 
 class Plugin implements PluginInterface
 {
