@@ -19,6 +19,6 @@
     }
   },
   "scripts": {
-    "post-update-cmd": "PicturaeJoomla\\Installer\\Installer::postUpdate",
+    "post-update-cmd": "PicturaeJoomla\\Installer\\Installer::postUpdate"
   }
 }

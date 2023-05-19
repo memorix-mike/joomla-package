@@ -26,16 +26,4 @@ class Installer
         $file = fopen("testfile.txt", "w");
         fwrite($file, "testbestand");
     }
-
-    public static function postUpdate(Event $event)
-    {
-        $composer = $event->getComposer();
-
-        // here be dragons
-        $file = fopen("testfile.txt", "w");
-        fwrite($file, "testbestand");
-        fwrite(STDOUT, "Task completed successfully!");
-
-        symlink('Joomla/test.php', 'test');
-    }
 }
