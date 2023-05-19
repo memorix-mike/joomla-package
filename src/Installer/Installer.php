@@ -20,12 +20,6 @@ class Installer
 
     public static function install()
     {
-        var_dump('start the install');
-
         Docker::setup();
-
-
-
-
     }
 }

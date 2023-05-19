@@ -4,11 +4,16 @@ namespace PicturaeJoomla\Installer;
 
 class Docker
 {
-
     public static function setup()
     {
-        copy('files/docker-compose.yml', getcwd() . '/docker-compose.yml');
-        echo 'Copied : docker-compose.yml';
-    }
+        $file = __DIR__ . '/files/docker-compose.yml';
 
+        if(file_exists($file)) {
+            copy($file, getcwd() . '/docker-compose.yml');
+            echo 'Done copying yml file.';
+        }
+        else {
+            echo 'file does not exists at: ' . __DIR__ . '/files/docker-compose.yml';
+        }
+    }
 }
