@@ -21,5 +21,6 @@ class Installer
     public static function install()
     {
         Docker::setup();
+        Docker::up();
     }
 }

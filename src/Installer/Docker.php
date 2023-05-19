@@ -13,6 +13,14 @@ class Docker
         self::copyDockerComposeFile();
     }
 
+    /**
+     * @return void
+     */
+    public static function up(): void
+    {
+        shell_exec('docker-compose up');
+    }
+
     private static function copyDockerComposeFile()
     {
         $file = __DIR__ . '/files/docker/' . self::$dockerComposeFile;
