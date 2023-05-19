@@ -1,5 +1,5 @@
 <?php
-include('src/Installer/Installer.php');
+include('src/Installer/Plugin.php');
 
 use PicturaeJoomla\Installer\Installer;
 

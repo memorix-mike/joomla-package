@@ -1,15 +1,14 @@
 <?php
+
 namespace PicturaeJoomla\Installer;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
-use Composer\Plugin\PluginInterface;
 
-class Installer implements PluginInterface
+class Installer
 {
-    public function activate(Composer $composer, IOInterface $io)
+    public function __construct(IOInterface $io, Composer $composer)
     {
-        $installer = new TemplateInstaller($io, $composer);
-        $composer->getInstallationManager()->addInstaller($installer);
+        dd('Lets go!');
     }
 }
