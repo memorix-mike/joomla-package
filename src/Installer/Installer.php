@@ -9,6 +9,8 @@ use Composer\Package\PackageInterface;
 use Composer\Repository\InstalledRepositoryInterface;
 use Symfony\Component\Console\Command\Command;
 
+use PicturaeJoomla\Installer\Docker;
+
 class Installer
 {
     public function __construct()
@@ -19,5 +21,11 @@ class Installer
     public static function install()
     {
         var_dump('start the install');
+
+        Docker::setup();
+
+
+
+
     }
 }
