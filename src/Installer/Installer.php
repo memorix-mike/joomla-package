@@ -11,10 +11,17 @@ use Symfony\Component\Console\Command\Command;
 
 class Installer implements InstallerInterface
 {
+
+    public function dump($var) {
+        echo '<pre>';
+        var_dump($var);
+        echo '</pre>';
+    }
+
     public function __construct(IOInterface $io, Composer $composer)
     {
-        var_dump('IO: ' . $io);
-        var_dump('Composer: ' . $composer); 
+        var_dump('IO: ' . dump($io));
+        var_dump('Composer: ' . dump($composer));
     }
 
     public function supports(string $packageType)
