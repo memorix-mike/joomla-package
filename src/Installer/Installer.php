@@ -12,7 +12,7 @@ use Symfony\Component\Console\Command\Command;
 class Installer implements InstallerInterface
 {
 
-    function dump($var) {
+    public function dump($var) {
         echo '<pre>';
         var_dump($var);
         echo '</pre>';
@@ -20,8 +20,15 @@ class Installer implements InstallerInterface
 
     public function __construct(IOInterface $io, Composer $composer)
     {
-        var_dump('IO: ' . dump($io));
-        var_dump('Composer: ' . dump($composer));
+        echo '<pre>';
+        var_dump($io);
+        echo '</pre>';
+
+        echo '<pre>';
+        var_dump($composer);
+        echo '</pre>';
+
+        echo 'why is the install script not running?!';
     }
 
     public function supports(string $packageType)
