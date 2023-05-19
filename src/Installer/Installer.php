@@ -8,7 +8,7 @@ use Composer\Installer\InstallerInterface;
 use Composer\Package\PackageInterface;
 use Composer\Repository\InstalledRepositoryInterface;
 
-class Installer extends InstallerInterface
+class Installer implements InstallerInterface
 {
     public function __construct(IOInterface $io, Composer $composer)
     {
