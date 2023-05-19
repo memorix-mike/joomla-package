@@ -14,8 +14,11 @@ class Plugin implements PluginInterface
         var_dump('install');
 
         $installer = new Installer($io, $composer);
-        $composer->getInstallationManager()
+        var_dump($installer);
+
+        $installManager = $composer->getInstallationManager()
                  ->addInstaller($installer);
+        var_dump($installManager);
     }
 
     public function deactivate(Composer $composer, IOInterface $io)
