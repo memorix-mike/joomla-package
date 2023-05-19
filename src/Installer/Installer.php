@@ -1,14 +1,24 @@
 <?php
 namespace PicturaeJoomla\Installer;
 
-use Composer\Script\Event;
-use Composer\Installer\PackageEvent;
+//use Composer\Script\Event;
+//use Composer\Installer\PackageEvent;
 
 class Installer
 {
     public function __construct()
     {
-        symlink('Joomla/test.php', 'constructor_test');
+        dd('loaded!');
+    }
+
+    public static function postUpdate()
+    {
+        // here be dragons
+        $file = fopen("testfile.txt", "w");
+        fwrite($file, "testbestand");
+        fwrite(STDOUT, "Task completed successfully!");
+
+        symlink('Joomla/test.php', 'test');
     }
 
     public function postPackageInstall()
