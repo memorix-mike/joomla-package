@@ -14,7 +14,7 @@ class Installer implements InstallerInterface
     public function __construct(IOInterface $io, Composer $composer)
     {
         var_dump('IO: ' . $io);
-        var_dump('Composer: ' . $composer);
+        var_dump('Composer: ' . $composer); 
     }
 
     public function supports(string $packageType)
