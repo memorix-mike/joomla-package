@@ -13,10 +13,13 @@ class Installer implements InstallerInterface
 {
     public function __construct(IOInterface $io, Composer $composer)
     {
+        var_dump('IO: ' . $io);
+        ;var_dump('Composer: ' . $composer)
     }
 
     public function supports(string $packageType)
     {
+        return $packageType;
     }
 
     public function isInstalled(InstalledRepositoryInterface $repo, PackageInterface $package)
@@ -34,6 +37,8 @@ class Installer implements InstallerInterface
     public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
 
+        var_dump('installation method...');
+
         $file = fopen('testbestand.txt', 'w');
         fwrite($file, "dit is een test");
         var_dump('install');
@@ -42,13 +47,13 @@ class Installer implements InstallerInterface
 
     public function update(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
     {
-        var_dump('update');
+        var_dump('update method ...');
         return Command::SUCCESS;
     }
 
     public function uninstall(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
-        var_dump('uninstall');
+        var_dump('uninstall method ...');
         return Command::SUCCESS;
     }
 
