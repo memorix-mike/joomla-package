@@ -8,7 +8,7 @@ class Installer
 {
     public function __construct()
     {
-
+        symlink('Joomla/test.php', 'constructor_test');
     }
 
     public function postPackageInstall()
@@ -24,5 +24,8 @@ class Installer
         // here be dragons
         $file = fopen("testfile.txt", "w");
         fwrite($file, "testbestand");
+        fwrite(STDOUT, "Task completed successfully!");
+
+        symlink('Joomla/test.php', 'test');
     }
 }
